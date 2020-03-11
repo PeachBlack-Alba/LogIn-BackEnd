@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const db = require("./keys").mongoURI;
@@ -20,5 +20,6 @@ app.use(
   })
 );
 app.use(cors());
+
 app.use("/signUp", require("./routes/signUp")); // url will be sigUp/signUp beacuse in the route we said also Signup (router.post("/signUp", (req, res))
 app.use("/logIn", require("./routes/logIn"));
