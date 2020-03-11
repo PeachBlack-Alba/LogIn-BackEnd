@@ -39,7 +39,7 @@ router.post("/", (req, res) => {
           res.json({
             // send the token if there is not a problem
             success: true,
-            token: "bearer" + token
+            token: "bearer " + token
           });
         }
       });
